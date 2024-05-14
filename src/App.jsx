@@ -1,24 +1,27 @@
-//import { useState } from 'react'
-/* import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg' */
-import Header from './components/Header';
-import Main from './components/Main';
-import './App.css'
-import Footer from './components/Footer';
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./components/pages/Home/Home";
+import Reservations from "./components/pages/Reservations/Reservations";
+import ConfirmedReservation from "./components/pages/Reservations/confirmedReservation";
+import NotFound from "./components/pages/NotFound/NotFound";
 
-function App() {
-  //const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <Header />
-
-      <Main />
-
-      <Footer />
-
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route
+            path="/confirmedReservation"
+            element={<ConfirmedReservation />}
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
     </>
-  )
-}
+  );
+};
 
 export default App;
