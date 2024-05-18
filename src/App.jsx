@@ -4,6 +4,7 @@ import Home from "./components/pages/Home/Home";
 import Reservations from "./components/pages/Reservations/Reservations";
 import ConfirmedReservation from "./components/pages/Reservations/confirmedReservation";
 import NotFound from "./components/pages/NotFound/NotFound";
+import OrderOnline from "./components/pages/OrderOnline/OrderOnline";
 
 const App = () => {
   return (
